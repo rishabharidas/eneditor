@@ -29,6 +29,7 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
 import javax.swing.event.UndoableEditEvent;
@@ -393,7 +394,7 @@ public class EnEditorPlus_Main_GUI extends javax.swing.JFrame {
         toolBar_JPanelLayout.setHorizontalGroup(
             toolBar_JPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(toolBar_JPanelLayout.createSequentialGroup()
-                .addComponent(icon_JLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(icon_JLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         toolBar_JPanelLayout.setVerticalGroup(
@@ -898,6 +899,7 @@ public class EnEditorPlus_Main_GUI extends javax.swing.JFrame {
 
     
     private UndoManager undoManager;
+    private JTextArea lineNumberBar;
     private Document doc;
     private boolean isFileSaved;
     private boolean isEncrypted;
@@ -913,6 +915,9 @@ public class EnEditorPlus_Main_GUI extends javax.swing.JFrame {
     {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/org/alamantechnologies/eneditorplus/img/eneditor-icon.jpg")));
     }
+     public JTextArea getLineNumberBarArea() {
+        return (lineNumberBar);
+     }
     private void decryptFile()
     {
         try 
